@@ -7,21 +7,29 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
         }
-        svg {
-            max-width: 90%;
-            max-height: 90%;
-        }
     </style>
 </head>
 <body>
-    <div id="graph-container"></div>
+    <h1>AI Concepts Knowledge Graph</h1>
+    <div id="graph-container">If you can see this, the page is loading correctly.</div>
+    <div id="d3-test"></div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof d3 !== 'undefined') {
+                d3.select("#d3-test").append("p").text("D3.js is working!");
+            } else {
+                console.error("D3.js is not loaded properly");
+            }
+        });
+    </script>
     <script src="graph.js"></script>
 </body>
 </html>
