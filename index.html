@@ -20,11 +20,11 @@
     <h1>AI Concepts Knowledge Graph</h1>
     <div id="graph-container"></div>
     <div id="d3-test"></div>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js">  </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof d3 !== 'undefined') {
-                d3.select("#d3-test").append("p").text("");
+                d3.select("#d3-test").append("p").text("  ");
             } else {
                 console.error("D3.js is not loaded properly");
             }
